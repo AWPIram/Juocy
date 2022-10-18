@@ -5,8 +5,8 @@ public class Gun : MonoBehaviour
 {
 
     float timer;
-    
-    
+
+    bool Looking;
 
     [SerializeField]
     private GameObject bullet;
