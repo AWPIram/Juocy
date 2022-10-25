@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; //all game over related code is written by Alex. rest is Iram.
 
 public class player1 : MonoBehaviour
 {
@@ -72,7 +73,10 @@ public class player1 : MonoBehaviour
         {
             speed = 40;
         }
-
+        if (phealth <= 0) // so basically this part is made by Alex.
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
       
     }
 

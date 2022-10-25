@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class highScore : MonoBehaviour
 {
     Text score;
-    int highscore;
+    public static int highscore;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +22,12 @@ public class highScore : MonoBehaviour
         if(highscore < score1.gs)
         {
             highscore = score1.gs;
-            PlayerPrefs.GetInt("highscore" + highscore);
+            PlayerPrefs.SetInt("highscore", highscore);
+            Debug.Log("Went through the check");
         }
-        score.text = ("HIGH SCORE : " + highscore);
+        score.text = "HIGH SCORE : " + highScore.highscore;
+        Debug.Log("Highscore: " + highscore);
+        Debug.Log("Score: " + score1.gs);
+
     }
 }
