@@ -30,6 +30,8 @@ public class player1 : MonoBehaviour
 
     public void Damage() {
         phealth = -1;
+
+        gameObject.transform.
     }
 
     // Update is called once per frame
@@ -72,4 +74,5 @@ public class player1 : MonoBehaviour
 
       
     }
+
 }
