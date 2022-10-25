@@ -43,7 +43,7 @@ public class Enemyscript : MonoBehaviour
         if (collision.gameObject.tag == "base")
         {
             espeed += k;
-            player.phealth -= 1;
+            player.Damage();
             Destroy(gameObject);
             
 

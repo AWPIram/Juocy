@@ -28,14 +28,14 @@ public class player1 : MonoBehaviour
         
     }
 
+    public void Damage() {
+        phealth = -1;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (phealth < 0)
-        {
-            phealth = 0;
-
-        }
+      
         
         timer += Time.deltaTime;
         if (Input.GetKey(right))
@@ -69,5 +69,7 @@ public class player1 : MonoBehaviour
         {
             speed = 40;
         }
+
+      
     }
 }

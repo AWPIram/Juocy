@@ -4,16 +4,16 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
 
-    float timer;
+    float timerg;
 
     bool Looking;
 
     [SerializeField]
     private GameObject bullet;
     float direction;
-    float ab;
+    float ab = 3;
     bool lazer;
-    bool freeze;
+    
     public object Yield 
     { 
         get; private set; 
@@ -29,7 +29,7 @@ public class Gun : MonoBehaviour
     void Update()
     {
         
-        timer += Time.deltaTime;
+        timerg += Time.deltaTime;
         
         if (lazer == true)
         {
@@ -42,19 +42,14 @@ public class Gun : MonoBehaviour
                 direction -= 1.5f;
             }
         }
-        if (freeze == true)
-        {
+       
 
-          
+
+        if (Input.GetKey(KeyCode.Space) && timerg > 0.25f)
+        {
             
-        }
-
-
-        if (Input.GetKey(KeyCode.Space) && timer > 0.25f)
-        {
-            timer = 0;
             Instantiate(bullet, transform.position + new Vector3(direction, ab, 0), bullet.transform.rotation);
-
+            timerg = 0;
 
         }
     }
