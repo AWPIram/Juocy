@@ -25,7 +25,7 @@ public class highScore : MonoBehaviour
             PlayerPrefs.SetInt("highscore", highscore);
             Debug.Log("Went through the check");
         }
-        score.text = "HIGH SCORE : " + highScore.highscore;
+        score.text = "HIGH SCORE : " + highscore;
         Debug.Log("Highscore: " + highscore);
         Debug.Log("Score: " + score1.gs);
 
