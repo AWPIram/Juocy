@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 //Score display code made by yours truly, Alex. Doing my fastest  to make this work. Also fuck TextMeshPro. BEHÖVDE GÖRA OM ALLT DETTA FÖR ATT FÅ DET ATT FUNKA. AAAAAAAAAAA
 //AAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaa. okay. I am going to personally go to Unity headquarters and uninstall Textmeshpro. Thats it thanks. Enjoy
-//this basically empty code cause well all it does is display score. What can I say, nothing impressive.
+//this basically empty code cause well all it does is display score. What can I say, nothing impressive. This code also serves the purpose of transitioning back into gameplay.
+
 public class scoreDisplay : MonoBehaviour
 {
     Text score;
@@ -19,5 +20,6 @@ public class scoreDisplay : MonoBehaviour
     void Update()
     {
         score.text = "HIGH SCORE : " + score1.gs;
+        
     }
 }
