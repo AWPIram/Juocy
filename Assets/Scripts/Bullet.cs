@@ -7,11 +7,14 @@ public class Bullet : MonoBehaviour
     float timer;
 
     [SerializeField]
+    float startSpeed;
+
     public static float bspeed;
 
     // Start is called before the first frame update
     void Start()
     {
+        bspeed = startSpeed;
         if (bspeed < 1)
         {
             bspeed = 1;
@@ -22,7 +25,6 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(bspeed);
         timer += Time.deltaTime;
 
         transform.position += new Vector3(0, bspeed, 0) *Time.deltaTime;
