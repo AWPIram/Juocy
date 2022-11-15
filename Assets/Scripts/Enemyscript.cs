@@ -10,7 +10,7 @@ public class Enemyscript : MonoBehaviour
     score1 score;
     player1 player;
     [SerializeField]
-    int kespeed;
+    public int kespeed;
 
     public static float espeed;
     // Start is called before the first frame update
