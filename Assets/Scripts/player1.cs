@@ -19,27 +19,48 @@ public class player1 : MonoBehaviour
     [SerializeField]
     public float speed;
 
-
+    MeshRenderer mr;
+    public Color blinkColor;
+    Color origianlColor;
 
     float timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        mr = GetComponent<MeshRenderer>();
+        origianlColor = mr.material.color;
     }
 
     public void Damage() {
-        phealth = -1;
+        phealth -= 1;
 
-        //gameObject.transform.
-       
+        StartCoroutine(Blink());
+        
+    }
+
+    IEnumerator Blink()
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            print("Blink"); //Blinkar
+            mr.material.color = blinkColor;
+            yield return new WaitForSeconds(0.125f);
+            print("blonk"); //Normal
+            mr.material.color = origianlColor;
+            yield return new WaitForSeconds(0.125f);
+        }
+        mr.material.color = origianlColor;
+        print("blonk"); //Normal igen
     }
 
     // Update is called once per frame
     void Update()
     {
-      
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Damage();
+        }
         
         timer += Time.deltaTime;
         if (Input.GetKey(right))
