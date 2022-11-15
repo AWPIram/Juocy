@@ -22,6 +22,6 @@ public class speedscore : MonoBehaviour
     void Update()
     {
 
-        speedtext.text = "Power:" + playeri.speed;
+        speedtext.text = "PWR:" + playeri.speed;
     }
 }
