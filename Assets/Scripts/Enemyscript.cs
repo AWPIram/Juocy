@@ -52,7 +52,7 @@ public class Enemyscript : MonoBehaviour
         if (collision.gameObject.tag == "plr")
         {
             espeed += k;
-            player.phealth -= 2;
+            player.Damage();
             Destroy(gameObject);
             
 
